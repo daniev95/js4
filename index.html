@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+  // Дан массив с числами
+const numbersArray = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100];
+
+// Вывести в консоль только нечетные числа
+numbersArray.forEach((num) => {
+  if (num % 2 !== 0) {
+    console.log(num);
+  }
+});
+
+// Дан массив со строчными элементами
+const stringsArray = ["lorem ipsum", "javascript", "php", "css", "react", "git", "html", "mysql"];
+
+// Вывести в консоль элементы у которых кол-во символов не больше 4-х
+stringsArray.filter((str) => str.length <= 4).forEach((shortStr) => console.log(shortStr));
+
+// Создание нового массива только с отрицательными элементами
+const negativeNumbers = [-13, 0, 12, 1662, -0.32, -102, -2].filter((num) => num < 0);
+
+// Подсчет суммы отрицательных элементов
+const sumOfNegatives = negativeNumbers.reduce((acc, num) => acc + num, 0);
+console.log(sumOfNegatives);
+
+// Дан массив с объектами
+const objectsArray = [{ a: 10, b: 5 }, { a: 20, b: 22 }, { a: 131, b: 55 }];
+
+// Создание нового массива с суммами свойств объектов
+const sumsArray = objectsArray.map((obj) => obj.a + obj.b);
+console.log(sumsArray);
+
+// Дан массив чисел
+const numbers = [5, 6, 7, 8, 9];
+
+// Создание нового массива с квадратами чисел
+const squaresArray = numbers.map((num) => num * num);
+console.log(squaresArray);
+
+// Дан массив с объектами
+const objects = [{ x: 10, y: "lorem" }, { x: 21, y: "lorem" }, { x: -17, y: "lorem" }, { x: 156, y: "lorem" }];
+
+// Подсчет суммы свойств 'x' всех объектов
+const sumOfXProperties = objects.reduce((acc, obj) => acc + obj.x, 0);
+console.log(sumOfXProperties);
+
+  </script>
+
+</body>
+</html>
